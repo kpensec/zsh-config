@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/usr/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/oropiko/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -118,12 +118,3 @@ bindkey -M vicmd v edit-command-line
 #zle -N zle-line-init
 #zle -N zle-keymap-select
 
-#if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-#    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
-#fi
-#
-#
-if [[ -z $TMUX || ! $TERM =~ 'tmux.*' ]]
-then
-  exec tmux
-fi
